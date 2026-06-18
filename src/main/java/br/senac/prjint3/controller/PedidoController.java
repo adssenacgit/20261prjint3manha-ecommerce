@@ -5,10 +5,12 @@ import br.senac.prjint3.service.PedidoService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/api/pedidos")
 @Tag(name = "pedidos")
+@CrossOrigin("*")    
 public class PedidoController extends AbstractCrudController<Pedido> {
 
     public PedidoController(PedidoService service) {
