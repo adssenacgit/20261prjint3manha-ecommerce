@@ -34,6 +34,11 @@ private BigDecimal produtoPreco;
 @Column(name = "produto_estoque")
 private Integer produtoEstoque;
 
+
+@Column(name = "produto_imagem", nullable = false, length = 500)
+private String produtoImagem;
+
+
 @Min(-1)
 @Max(1)
 @Column(name = "produto_status")
@@ -87,7 +92,15 @@ public void setProdutoEstoque(Integer produtoEstoque) {
     this.produtoEstoque = produtoEstoque;
 }
 
-public Integer getProdutoStatus() {
+public String getProdutoImagem() {
+    return produtoImagem;
+}
+
+public void setProdutoImagem(String produtoImagem) {
+    this.produtoImagem = produtoImagem;
+}
+
+    public Integer getProdutoStatus() {
     return produtoStatus;
 }
 
